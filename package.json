@@ -1,0 +1,37 @@
+{
+  "name": "babel-plugin-iife",
+  "version": "0.0.1",
+  "description": "Babel plugin for wrapping demo code as iife",
+  "keywords": ["babel", "plugin"],
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "files": [
+    "dist",
+    "compiled"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "dev": "father dev",
+    "prepublishOnly": "father doctor && npm run build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/types": "^7.23.6",
+    "@types/babel__core": "^7.20.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@vue/babel-plugin-jsx": "^1.1.1",
+    "father": "^4.1.9",
+    "vitest": "^1.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "jeffwcx <jeffwcx@icloud.com>"
+  ]
+}
